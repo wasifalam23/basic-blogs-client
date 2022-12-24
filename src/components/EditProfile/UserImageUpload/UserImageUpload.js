@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import defaultUserImg from '../../../assets/default.jpg';
-import { faPen, faTimes, faCamera } from '@fortawesome/free-solid-svg-icons';
+import { faTimes, faCamera } from '@fortawesome/free-solid-svg-icons';
 
 import './UserImageUpload.scss';
 

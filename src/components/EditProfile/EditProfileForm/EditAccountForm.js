@@ -4,7 +4,6 @@ import { postActions } from '../../../store/post-slice';
 import { userActions } from '../../../store/user-slice';
 import {
   VALIDATE_TEXT_REQ_MAX_8,
-  VALIDATE_TEXT_REQUIRED,
   VALIDATE_EMAIL,
 } from '../../FormElements/validator';
 
@@ -31,7 +30,6 @@ const EditAccountForm = () => {
     imgFilePickedRef,
     previewUrl,
     setPreviewUrl,
-    imgFileIsValid,
     pickImgHandler,
     imgPickedHandler,
     inputKey,

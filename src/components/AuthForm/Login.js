@@ -22,7 +22,6 @@ const Login = () => {
     valueBlurHandler: emailBlurHandler,
     isValid: emailIsValid,
     hasError: emailHasError,
-    reset: emailReset,
   } = useForm(VALIDATE_EMAIL);
 
   const {
@@ -31,7 +30,6 @@ const Login = () => {
     valueBlurHandler: passBlurHandler,
     isValid: passIsValid,
     hasError: passHasError,
-    reset: passReset,
   } = useForm(VALIDATE_PASSWORD);
 
   let formIsValid = emailIsValid && passIsValid;

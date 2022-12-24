@@ -1,9 +1,10 @@
 import React, { useEffect } from 'react';
-
 import { useParams } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { postActions } from '../../../store/post-slice';
+
 import { toast } from 'react-toastify';
+import useHttp from '../../../hooks/http-hook';
 
 import { VALIDATE_TEXT_REQUIRED } from '../../FormElements/validator';
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
@@ -14,7 +15,6 @@ import Button from '../../FormElements/Button/Button';
 import PostImageUpload from '../PostImageUpload/PostImageUpload';
 
 import './AddPostForm.scss';
-import useHttp from '../../../hooks/http-hook';
 
 const AddPostForm = () => {
   const dispatch = useDispatch();
@@ -28,7 +28,6 @@ const AddPostForm = () => {
     imgFilePickedRef,
     previewUrl,
     setPreviewUrl,
-    imgFileIsValid,
     pickImgHandler,
     imgPickedHandler,
     inputKey,

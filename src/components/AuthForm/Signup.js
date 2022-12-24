@@ -27,7 +27,6 @@ const Signup = () => {
     valueBlurHandler: firstNameBlurHandler,
     isValid: firstNameIsValid,
     hasError: firstNameHasError,
-    reset: firstNameReset,
   } = useForm(VALIDATE_TEXT_REQ_MAX_8);
 
   const {
@@ -36,7 +35,6 @@ const Signup = () => {
     valueBlurHandler: lastNameBlurHandler,
     isValid: lastNameIsValid,
     hasError: lastNameHasError,
-    reset: lastNameReset,
   } = useForm(VALIDATE_TEXT_REQ_MAX_8);
 
   const {
@@ -45,7 +43,6 @@ const Signup = () => {
     valueBlurHandler: emailBlurHandler,
     isValid: emailIsValid,
     hasError: emailHasError,
-    reset: emailReset,
   } = useForm(VALIDATE_EMAIL);
 
   const {
@@ -54,7 +51,6 @@ const Signup = () => {
     valueBlurHandler: passBlurHandler,
     isValid: passIsValid,
     hasError: passHasError,
-    reset: passReset,
   } = useForm(VALIDATE_PASSWORD);
 
   const {
@@ -63,7 +59,6 @@ const Signup = () => {
     valueBlurHandler: confPassBlurHandler,
     isValid: confPassIsValid,
     hasError: confPassHasError,
-    reset: confPassReset,
   } = useForm(VALIDATE_PASSWORD);
 
   let formIsValid =

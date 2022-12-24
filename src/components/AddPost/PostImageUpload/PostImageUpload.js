@@ -1,11 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faImage,
-  faTimes,
-  faPen,
-  faTriangleExclamation,
-} from '@fortawesome/free-solid-svg-icons';
+import { faImage, faTimes, faPen } from '@fortawesome/free-solid-svg-icons';
 
 import './PostImageUpload.scss';
 

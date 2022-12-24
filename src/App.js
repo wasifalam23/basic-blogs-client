@@ -1,12 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
+import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
+
+import useHttp from './hooks/http-hook';
 import { postActions } from './store/post-slice';
 import { userActions } from './store/user-slice';
 import { authActions } from './store/auth-slice';
-
-import useHttp from './hooks/http-hook';
-
-import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
 
 import Header from './components/Header/Header';
 import Posts from './pages/Posts';
