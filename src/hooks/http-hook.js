@@ -13,7 +13,7 @@ const useHttp = () => {
         method: reqConfing.method ? reqConfing.method : 'GET',
         headers: reqConfing.headers ? reqConfing.headers : {},
         body: reqConfing.body ? reqConfing.body : null,
-        withCredentials: true,
+        credentials: 'include',
       });
 
       const data = await response.json();
