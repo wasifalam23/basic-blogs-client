@@ -1,0 +1,149 @@
+@import '../../../index.scss';
+
+.post-upload {
+  &__preview {
+    background-color: $color-gray-light;
+    border-radius: $border-radius-5px;
+    width: 100%;
+    height: 30rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: $transition-3s;
+
+    @include for-tablet {
+      height: 40rem;
+    }
+
+    @include for-mobile {
+      height: 30rem;
+    }
+  }
+
+  &__preview:hover {
+    background-color: $color-gray-dark;
+  }
+
+  &__img--holder {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+
+  &__img--header {
+    width: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.8rem 1rem 0 1.2rem;
+
+    @include for-tablet {
+      padding: 1rem 1.5rem 0 1.2rem;
+    }
+  }
+
+  &__img--edit-btn {
+    color: $color-white;
+    border: none;
+    padding: 0.8rem 1.6rem;
+    border-radius: 5px;
+    font-family: $font-family-inter;
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    cursor: pointer;
+
+    @include for-tablet {
+      padding: 1rem 1.6rem;
+    }
+  }
+
+  &__img--edit-icon {
+    font-size: 1.3rem;
+  }
+
+  &__img--edit-text {
+    font-size: 1.4rem;
+    font-weight: $font-semibold;
+    @include for-tablet {
+      font-size: 1.4rem;
+    }
+  }
+
+  &__img--cross-btn {
+    border: none;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+
+    @include for-tablet {
+      width: 4rem;
+      height: 4rem;
+    }
+  }
+
+  &__img--cross-icon {
+    font-size: 2.3rem;
+    color: $color-white;
+  }
+
+  &__img--edit-btn,
+  &__img--cross-btn {
+    background-color: #0707077e;
+    transition: $transition-3s;
+  }
+
+  &__img--edit-btn:hover,
+  &__img--cross-btn:hover {
+    background-color: #5e5e5e7e;
+  }
+
+  &__img--image {
+    border-radius: $border-radius-5px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: $transition-3s;
+  }
+
+  &__pick--holder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+  }
+
+  &__pick--img-holder {
+    width: 4rem;
+    height: 4rem;
+    background-color: #a3a5a7;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include for-tablet {
+      width: 4.8rem;
+      height: 4.8rem;
+    }
+  }
+
+  &__pick--img-icon {
+    font-size: 1.6rem;
+
+    @include for-tablet {
+      font-size: 1.9rem;
+    }
+  }
+
+  &__pick--text {
+    font-size: 1.5rem;
+    font-weight: $font-medium;
+  }
+}

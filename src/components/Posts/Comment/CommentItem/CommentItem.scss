@@ -1,0 +1,80 @@
+@import '../../../../index.scss';
+
+.comment-item {
+  &__container {
+    position: relative;
+    background-color: $color-teal-light-2;
+    padding: 1.2rem;
+    padding-right: 3rem;
+    border-radius: $border-radius-5px;
+
+    @include for-tablet {
+      padding: 1.6rem 1.5rem;
+    }
+  }
+
+  &__main--content {
+    display: flex;
+    gap: 1rem;
+  }
+
+  &__user-img {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+
+    @include for-tablet {
+      width: 4.3rem;
+      height: 4.3rem;
+    }
+  }
+
+  &__content {
+    display: flex;
+    gap: 2rem;
+    margin-top: 0.4rem;
+    padding-right: 1rem;
+  }
+
+  &__user-date--holder {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  &__user-name {
+    font-size: 1.3rem;
+    font-weight: $font-medium;
+
+    @include for-tablet {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__comment {
+    font-size: 1.3rem;
+    margin-top: 0.8rem;
+    line-height: 1.2;
+    font-weight: $font-regular;
+    color: $color-black;
+
+    @include for-tablet {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__comment-date {
+    font-size: 1.15rem;
+    color: $color-gray-dark-3;
+    font-weight: $font-regular;
+
+    @include for-tablet {
+      font-size: 1.2rem;
+    }
+  }
+
+  &__dropdown {
+    right: 0.8rem;
+    top: 0.3rem;
+  }
+}

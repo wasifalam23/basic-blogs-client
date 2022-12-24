@@ -1,0 +1,10 @@
+@import '../../../../index.scss';
+
+.comment-list {
+  &__container {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+  }
+}

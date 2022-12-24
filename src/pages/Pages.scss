@@ -1,0 +1,65 @@
+@import '../index.scss';
+
+.add-post-page {
+  &__container {
+    @include for-tablet {
+      max-width: 85%;
+    }
+
+    @include for-mobile {
+      max-width: 100%;
+    }
+  }
+}
+
+.post-details-page {
+  &__container {
+    max-width: 85rem;
+  }
+}
+
+.edit-profile-page {
+  &__container {
+    max-width: 120rem;
+  }
+}
+
+.auth-page {
+  &__container {
+    max-width: 95rem;
+    margin: 0 auto;
+    margin-top: 16rem;
+    padding: 0 3rem;
+    padding-bottom: 10rem;
+
+    @include for-smaller-tablet {
+      max-width: 70rem;
+      padding: 0 4rem;
+      padding-bottom: 8rem;
+    }
+
+    @include for-mobile {
+      margin-top: 12rem;
+    }
+
+    @include for-small-mobile {
+      padding: 0 3rem;
+    }
+  }
+}
+
+.my-posts-page {
+  &__alt--text {
+    font-size: 1.6rem;
+    font-weight: $font-regular;
+    color: $color-primary-teal;
+  }
+}
+
+.fallback-text {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 13rem;
+  font-weight: $font-regular;
+  color: $color-black;
+}

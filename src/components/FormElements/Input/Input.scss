@@ -1,0 +1,83 @@
+@import '../../../index.scss';
+
+.input {
+  &__box {
+    width: 100%;
+    position: relative;
+  }
+
+  &__error--msg {
+    position: absolute;
+    top: -1.3rem;
+    left: 0.3rem;
+    font-size: 1rem;
+    font-weight: $font-medium;
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+    color: $color-red-deep;
+
+    @include for-tablet {
+      font-size: 1.1rem;
+    }
+  }
+
+  &__error--icon {
+    font-size: 1.1rem;
+    display: none;
+  }
+
+  // Input & TextArea
+  &__box input,
+  &__box textArea {
+    width: 100%;
+    background-color: $color-white;
+    color: $color-black;
+    padding: 1.2rem 2rem;
+    border-radius: $border-radius-5px;
+    font-family: $font-family-inter;
+    font-weight: $font-regular;
+    border: 1px solid $color-gray-light;
+    font-size: 1.8rem;
+    outline: none;
+
+    @include for-tablet {
+      padding: 1.6rem 2rem;
+    }
+  }
+
+  &__box input:focus,
+  &__box textArea:focus {
+    border: 1px solid $color-teal-light-2;
+  }
+
+  &__box input::placeholder,
+  &__box textarea::placeholder {
+    font-family: $font-family-inter;
+    font-weight: $font-regular;
+    color: $color-gray-dark-2;
+    font-size: 1.4rem;
+    @include for-tablet {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__box--invalid input,
+  &__box--invalid textarea {
+    border: 1px solid $color-red-medium;
+    background-color: $color-red-light;
+  }
+
+  &__box--invalid input:focus,
+  &__box--invalid textarea:focus {
+    border: 1px solid $color-teal-light;
+    background-color: $color-white;
+  }
+
+  // TextArea Field
+  &__box textarea {
+    height: 100%;
+    resize: none;
+  }
+}

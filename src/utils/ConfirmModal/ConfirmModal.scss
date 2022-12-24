@@ -1,0 +1,104 @@
+@import '../../index.scss';
+
+.confirm-modal {
+  &__container {
+    position: fixed;
+    top: 30vh;
+    left: 50%;
+    padding: 3rem 4rem;
+    border-radius: $border-radius-5px;
+    transform: translate(-50%);
+    z-index: 10000;
+    overflow: hidden;
+    background-color: $color-white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: $box-shadow-2;
+
+    @include for-tablet {
+      padding: 4rem 5rem;
+    }
+
+    @include for-mobile {
+      padding: 3rem 4rem;
+    }
+  }
+
+  &__backdrop {
+    z-index: 1000;
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 2rem;
+
+    @include for-mobile {
+      margin-bottom: 1.7rem;
+    }
+  }
+
+  &__warning-icon {
+    font-size: 4rem;
+    color: $color-red-deep;
+  }
+
+  &__title {
+    font-size: 2.4rem;
+    font-weight: $font-light;
+    color: $color-gray-dark-2;
+  }
+
+  &__content {
+    text-align: center;
+  }
+
+  &__message {
+    font-size: 1.4rem;
+    font-weight: $font-regular;
+    color: $color-black;
+    line-height: 1.2;
+
+    @include for-tablet {
+      font-size: 1.6rem;
+    }
+
+    @include for-mobile {
+      font-size: 1.4rem;
+    }
+  }
+
+  &__footer {
+    margin-top: 3rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  &__btn--cancel,
+  &__btn--confirm {
+    font-family: $font-family-inter;
+    font-weight: $font-semibold;
+    padding: 0.8rem 1.3rem;
+    font-size: 1.2rem;
+
+    @include for-tablet {
+      padding: 1rem 1.6rem;
+      font-size: 1.3rem;
+    }
+  }
+
+  &__btn--cancel {
+    background-color: $color-gray-dark-3;
+  }
+
+  &__btn--cancel:hover {
+    background-color: $color-gray-dark-4;
+  }
+
+  &__btn--confirm {
+  }
+}

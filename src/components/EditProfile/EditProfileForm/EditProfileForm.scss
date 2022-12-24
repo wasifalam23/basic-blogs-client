@@ -1,0 +1,66 @@
+@import '../../../index.scss';
+
+.edit-profile {
+  &__container {
+  }
+
+  &__inputs--holder {
+    display: flex;
+    gap: 8rem;
+
+    @include for-tablet {
+      gap: 6rem;
+    }
+
+    @include for-mobile {
+      flex-direction: column;
+    }
+  }
+
+  &__user-img--upload {
+    margin-bottom: 6rem;
+    @include for-mobile {
+    }
+  }
+
+  &__account-inputs--holder {
+    flex: 0 1 50%;
+
+    @include for-mobile {
+      flex: 1;
+    }
+  }
+
+  &__password-inputs--holder {
+    align-self: flex-end;
+    flex: 0 1 50%;
+
+    @include for-mobile {
+      flex: 1;
+      align-self: initial;
+    }
+  }
+
+  &__input-type--title {
+    font-size: 1.6rem;
+    font-weight: $font-semibold;
+    margin-bottom: 2.6rem;
+  }
+
+  &__text-inputs--holder {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  &__save--btn {
+    align-self: flex-end;
+    margin-top: 0.5rem;
+    // padding: 0.8rem 2rem;
+
+    @include for-tablet {
+      padding: 1.2rem 2rem;
+      font-size: 1.4rem;
+    }
+  }
+}

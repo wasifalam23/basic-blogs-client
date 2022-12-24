@@ -1,0 +1,112 @@
+@import '../../../../index.scss';
+
+.user-card {
+  &__backdrop {
+    background: transparent !important;
+  }
+
+  &__container {
+    width: 22rem;
+    position: absolute;
+    background-color: $color-white;
+    z-index: 100;
+    right: 2rem;
+    top: 4.3rem;
+    border-radius: $border-radius-5px;
+    overflow: hidden;
+    padding: 2rem 1.4rem;
+    padding-bottom: 1.4rem;
+    box-shadow: $box-shadow-2;
+
+    @include for-small-desktop {
+      top: 4.6rem;
+    }
+
+    @include for-tablet {
+      top: 5rem;
+    }
+  }
+
+  &__user--holder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 3.5rem 2rem 3.5rem;
+    border-bottom: 0.5px solid $color-gray-dark;
+  }
+
+  &__user--photo {
+    width: 4.8rem;
+    height: 4.8rem;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    border: 2px solid $color-primary-teal;
+  }
+
+  &__user--name {
+    font-size: 1.4rem;
+    font-weight: $font-medium;
+    color: $color-black;
+    margin-bottom: 0.4rem;
+  }
+
+  &__user--email {
+    font-size: 1.35rem;
+    color: $color-gray-dark-2;
+    font-weight: $font-medium;
+  }
+
+  &__actions--holder {
+    list-style: none;
+    padding-top: 1.4rem;
+  }
+
+  &__edit-user--link,
+  &__logout--btn {
+    font-family: $font-family-inter;
+    padding: 1.8rem 2rem 1.8rem 1.6rem;
+    width: 100%;
+    background: none;
+    color: $color-black;
+    display: flex;
+    align-items: center;
+    font-size: 1.4rem;
+    font-weight: $font-medium;
+    border: none;
+    cursor: pointer;
+    border-radius: $border-radius-5px;
+  }
+
+  &__edit-user--link:hover,
+  &__logout--btn:hover {
+    background-color: $color-primary-gray;
+  }
+
+  &__edit-user--link:link,
+  &__edit-user--link:visited {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  &__edit-user--text {
+    margin-left: 1rem;
+  }
+  &__logout--text {
+    margin-left: 1.4rem;
+  }
+
+  &__edit-user--icon,
+  &__logout--icon {
+    font-size: 1.6rem;
+  }
+
+  &__edit-user--icon {
+    font-size: 1.5rem;
+  }
+
+  &__chevron--icon {
+    margin-left: auto;
+    font-size: 1.6rem;
+    color: $color-primary-teal;
+  }
+}

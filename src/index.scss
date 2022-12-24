@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+// Font Variables
+$font-family-inter: 'Inter', sans-serif;
+
+$font-light: 300;
+$font-regular: 400;
+$font-medium: 500;
+$font-semibold: 600;
+$font-bold: 700;
+$font-extra-bold: 800;
+
+// Color Variables
+$color-primary-teal: #0ca678;
+$color-primary-gray: #e9ecef;
+$color-black: #222;
+$color-white: #fff;
+
+$color-teal-light: #3db893;
+$color-teal-light-2: #abf5df;
+$color-teal-fade: #3db8938e;
+
+$color-gray-light: #d2d4d7;
+$color-gray-dark: #babdbf;
+$color-gray-dark-2: #828486;
+$color-gray-dark-3: #696969;
+$color-gray-dark-4: #495057;
+
+$color-red-deep: #f02849;
+$color-red-medium: #fa5252;
+$color-red-light: #ffe3e3;
+
+// Other Variables
+$border-radius-5px: 5px;
+$transition-3s: all 0.3s ease-in-out;
+$box-shadow-2: 1px 2px 5px rgba(0, 0, 0, 0.1);
+
+// Mixins, Breakpoints
+// 1366px
+@mixin for-small-desktop {
+  @media screen and (max-width: 85.25em) {
+    @content;
+  }
+}
+
+// 1200px
+@mixin for-landscape-tablet {
+  @media screen and (max-width: 75em) {
+    @content;
+  }
+}
+
+// 944px
+@mixin for-tablet {
+  @media screen and (max-width: 59em) {
+    @content;
+  }
+}
+
+// 768px
+@mixin for-smaller-tablet {
+  @media screen and (max-width: 48em) {
+    @content;
+  }
+}
+
+// 544px
+@mixin for-mobile {
+  @media screen and (max-width: 34em) {
+    @content;
+  }
+}
+
+// 384px
+@mixin for-small-mobile {
+  @media screen and (max-width: 24em) {
+    @content;
+  }
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent !important;
+  outline: none !important;
+
+  @include for-landscape-tablet {
+    font-size: 56.25%; // 9px
+  }
+
+  @include for-tablet {
+    font-size: 50%; // 8px
+  }
+}
+
+body {
+  font-family: $font-family-inter;
+  line-height: 1;
+  background-color: $color-primary-gray;
+
+  @include for-smaller-tablet {
+    overflow-x: hidden;
+    position: relative;
+    min-height: 100vh;
+  }
+}

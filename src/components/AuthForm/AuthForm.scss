@@ -1,0 +1,140 @@
+@import '../../index.scss';
+
+.auth-form {
+  &__container {
+    height: 55rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: $color-white;
+    border-radius: $border-radius-5px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+
+    @include for-smaller-tablet {
+      grid-template-columns: 1fr;
+      height: initial;
+      padding-bottom: 4rem;
+    }
+  }
+
+  &__intro--holder {
+    background-color: #d6f4eb;
+    padding: 2.8rem 2rem 0 0;
+
+    @include for-smaller-tablet {
+      padding-bottom: 3rem;
+      padding-right: 3rem;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__form--holder {
+    padding: 3rem 0 0 0;
+    width: 80%;
+    margin: 0 auto;
+
+    @include for-smaller-tablet {
+      padding-top: 4rem;
+    }
+  }
+
+  &__intro--title,
+  &__intro--descr {
+    margin-left: 3.2rem;
+  }
+
+  &__intro--title {
+    font-weight: $font-bold;
+    font-size: 2.2rem;
+    color: $color-black;
+    margin-bottom: 0.6rem;
+  }
+
+  &__intro--descr {
+    font-size: 1.3rem;
+    color: $color-gray-dark-2;
+    font-weight: $font-medium;
+    line-height: 1.1;
+  }
+
+  &__intro--illus {
+    margin-top: 6rem;
+    width: 97%;
+
+    @include for-smaller-tablet {
+      margin-top: 3rem;
+      width: 70%;
+      align-self: flex-end;
+    }
+  }
+
+  &__form--intro {
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    color: $color-gray-dark-2;
+    font-weight: $font-semibold;
+    margin-bottom: 0.5rem;
+  }
+
+  &__form--title {
+    font-weight: $font-bold;
+    font-size: 2.2rem;
+    margin-bottom: 2.8rem;
+  }
+
+  &__form--control {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  &__form--control input {
+    font-size: 1.6rem;
+  }
+
+  &__form--control input::placeholder {
+    font-size: 1.3rem;
+  }
+
+  &__form--btn {
+    width: 100%;
+    text-align: center;
+    display: block;
+    margin-top: 0.7rem;
+    padding: 1.2rem 2rem;
+    font-size: 1.5rem;
+    font-weight: $font-semibold;
+
+    @include for-tablet {
+      padding: 1.4rem 2rem;
+    }
+  }
+
+  &__mode--content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    margin-top: 2rem;
+  }
+
+  &__mode--text {
+    font-size: 1.3rem;
+    color: $color-black;
+    font-weight: $font-regular;
+  }
+
+  &__mode--btn {
+    background: none;
+    border: none;
+    font-family: $font-family-inter;
+    // text-decoration: underline;
+    font-weight: $font-medium;
+    font-size: 1.3rem;
+    cursor: pointer;
+  }
+
+  &__mode--btn:hover {
+    text-decoration: underline;
+  }
+}
