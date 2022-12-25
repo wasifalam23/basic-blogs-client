@@ -14,6 +14,7 @@ const useHttp = () => {
         headers: reqConfing.headers ? reqConfing.headers : {},
         body: reqConfing.body ? reqConfing.body : null,
         credentials: 'include',
+        withCredentials: true,
       });
 
       const data = await response.json();
