@@ -30,8 +30,8 @@
   }
 
   &__disabled {
-    pointer-events: none;
-    background-color: $color-teal-fade;
-    transition: none;
+    pointer-events: none !important;
+    background-color: $color-teal-fade !important;
+    transition: none !important;
   }
 }
